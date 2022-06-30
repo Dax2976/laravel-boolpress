@@ -1922,6 +1922,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'PostList',
@@ -37539,16 +37540,28 @@ var render = function () {
         { staticClass: "my-5" },
         _vm._l(_vm.posts, function (post) {
           return _c("div", { key: post.id, staticClass: "card text-center" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("h2", [_vm._v(_vm._s(post.title))]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(post.description))]),
-              _vm._v(" "),
-              _c("img", {
-                staticClass: "img-fluid w-50",
-                attrs: { src: "{{post.image}}", alt: "" },
-              }),
-            ]),
+            _c(
+              "div",
+              { staticClass: "card-body" },
+              [
+                _c("h2", [_vm._v(_vm._s(post.title))]),
+                _vm._v(" "),
+                _c("p", [_vm._v(_vm._s(post.description))]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-fluid w-50",
+                  attrs: { src: "{{post.image}}", alt: "" },
+                }),
+                _vm._v(" "),
+                _c("router-link", {
+                  staticClass: "btn btn-primary",
+                  attrs: {
+                    to: { name: "post-detail", params: { id: post.id } },
+                  },
+                }),
+              ],
+              1
+            ),
           ])
         }),
         0
