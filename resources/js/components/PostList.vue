@@ -31,6 +31,14 @@
             },
             mounted(){
                 this.getPosts();
+            },
+            created(){
+                if(response.data.status_code === 404){
+                    this.$router.push({name:'not-found'})
+                }else{
+                    this.posts = response.data;
+                    
+                }
             }
         }
         

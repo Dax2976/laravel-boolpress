@@ -2551,7 +2551,7 @@ var router = new VueRouter({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/Laravel/laravel-boolpress/resources/js/routes.js */"./resources/js/routes.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/laravel-boolpress/resources/js/routes.js */"./resources/js/routes.js");
 
 
 /***/ })

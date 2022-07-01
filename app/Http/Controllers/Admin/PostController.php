@@ -21,6 +21,16 @@ class PostController extends Controller
     }
 
     public function show(Post $post){
+        if($post){
+
+            return $post;
+
+        } else {
+           return response()->json([
+               'status_code'=> 404,
+               'status_text'=>'not found',
+           ]);
+        }
         return view('admin.posts.show',compact('post'));
     }
 
@@ -44,11 +54,12 @@ class PostController extends Controller
         $post->slug = Str::slug($post->title,'-');
         $post->save();
 
-        if ( array_key_exists( 'tags', $data ) )  $post->tags()->attach($data['tags']);
-        return rederict()->route('admin.posts.index');
+        //if ( array_key_exists( 'tags', $data ) )  $post->tags()->attach($data['tags']);
+       
 
         $mail = New SendNewMail();
         Mail::to($user->email)->send($mail);
+        return rederict()->route('admin.posts.index');
     }
 
     public function edit(Post $post){
