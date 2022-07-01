@@ -39,7 +39,7 @@
 
 <script>
 export default {
-   neme: 'NotFound'
+   name: 'ErrorPage'
 }
 </script>
 

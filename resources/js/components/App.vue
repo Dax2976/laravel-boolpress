@@ -6,13 +6,15 @@
 
 <script>
     import PostList from './PostList.vue'
-    import PostDetailPage from './PostDetailPage.vue'
+    import PostDetailPage from './PostDetail'
+    import ErrorPage from './ErrorPage.vue'
 
     export default{
         name:'App',
         components:{
             PostList,
             PostDetailPage,
+            ErrorPage,
         }
     }
 </script>
